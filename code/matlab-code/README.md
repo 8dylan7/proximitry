@@ -9,5 +9,7 @@ As far as we are aware, running the lab the way you see it in Texas Instruments'
 To do this, you can open all the files from the Area_Scanner_GUI folder in MATLAB. Navigate to the area_scanner_visualizer.m file, and press play on the button circled in red.
 ![image](https://github.com/8dylan7/proximitry/assets/96851333/65d4669c-1098-479d-9866-43761951ff4f)
 
-You will likely have to download the ![Instrument Control Toolbox](https://www.mathworks.com/products/instrument.html), and possibly other modules that we've forgotten. Make sure you use your school email for MATLAB and also to download this module, that way it's all free.
+You will likely have to download the [Instrument Control Toolbox](https://www.mathworks.com/products/instrument.html), and possibly other modules that we've forgotten. Make sure you use your school email for MATLAB and also to download this module, that way it's all free. (You should see something like this image at the bottom of the Instrument Control Toolbox)
+
+![image](https://github.com/8dylan7/proximitry/assets/96851333/8579e5bf-f6a7-4356-9fb5-4f4e1fcb32c4)
 
