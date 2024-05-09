@@ -16,53 +16,6 @@ public class CollisionManager : MonoBehaviour
         buffer.Add(color);
     }
 
-    /*// Unity's Update method
-    void Update()
-    {
-        frame++;
-
-        if (frame == 20)
-        {
-            sigZone = "green";
-
-            // Print the entire buffer before processing
-            Debug.Log("Buffer contents before processing: " + ListToString(buffer));
-
-            foreach (string color in buffer)
-            {
-                Debug.Log("Processing color: " + color);
-                if (color == "red" && (sigZone == "yellow" || sigZone == "green"))
-                {
-                    sigZone = "red";
-                    packetSender.SendR();
-
-                }
-                else if (color == "yellow" && sigZone == "green")
-                {
-                    sigZone = "yellow";
-                    packetSender.SendY();
-                }
-                else if(sigZone == "green" && (sigZone != "red" && sigZone != "yellow"))
-                {
-                    sigZone = "green";
-                    Debug.Log("hihihi");
-                    packetSender.SendG();
-                }
-
-            }
-
-            // Send UDP message with sigZone to IP "192.168.0.1"
-            SendUDP(sigZone);
-
-            // Print the final decision on sigZone
-            Debug.Log("Final sigZone: " + sigZone);
-
-            // Clear the buffer array
-            buffer.Clear();
-            frame = 0; // Reset frame count
-        }
-    }*/
-
     void Update()
     {
         frame++;
@@ -106,7 +59,6 @@ public class CollisionManager : MonoBehaviour
                 packetSender.SendG();  // Send the green signal as fallback
             }
 
-            // Send UDP message with sigZone to IP "192.168.0.8"
             SendUDP(sigZone);
 
             // Print the final decision on sigZone
@@ -124,10 +76,12 @@ public class CollisionManager : MonoBehaviour
         return string.Join(", ", list);
     }
 
-    // Method to send UDP message
+    // Method to send UDP message to Pico W
     private void SendUDP(string message)
     {
         UdpClient client = new UdpClient();
+
+        // Update your IP to the IP of the haptic feedback device you use
         IPEndPoint endPoint = new IPEndPoint(IPAddress.Parse("192.168.0.8"), 80);
         byte[] data = Encoding.UTF8.GetBytes(message);
         client.Send(data, data.Length, endPoint);
