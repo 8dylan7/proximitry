@@ -12,4 +12,4 @@ You can then hit the play button to load the program onto the Pico W.
 You'll see the IP address of the Pico in the console. Make sure to put that IP in the client-side Python code or C# code when you run either.
 
 ## Client-side
-You can run the client.py program if you want to test the haptic feedback by itself, or if you're running the Unity project, it *should* automatically send commands. Again, make sure the IP address in either client.py or clientUNITY.cs matches the IP address you see in the console in Thonny.
+You can run the client.py program if you want to test the haptic feedback by itself, or if you're running the Unity project, it *should* automatically send commands. Again, make sure the IP address in either client.py or CollisionManager.cs matches the IP address you see in the console in Thonny.
