@@ -59,7 +59,6 @@ public class CollisionManager : MonoBehaviour
                 packetSender.SendG();  // Send the green signal as fallback
             }
 
-            // Send UDP message with sigZone to IP "192.168.0.8"
             SendUDP(sigZone);
 
             // Print the final decision on sigZone
@@ -77,10 +76,12 @@ public class CollisionManager : MonoBehaviour
         return string.Join(", ", list);
     }
 
-    // Method to send UDP message
+    // Method to send UDP message to Pico W
     private void SendUDP(string message)
     {
         UdpClient client = new UdpClient();
+
+        // Update your IP to the IP of the haptic feedback device you use
         IPEndPoint endPoint = new IPEndPoint(IPAddress.Parse("192.168.0.8"), 80);
         byte[] data = Encoding.UTF8.GetBytes(message);
         client.Send(data, data.Length, endPoint);
