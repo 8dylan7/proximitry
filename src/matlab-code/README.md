@@ -2,7 +2,7 @@
 
 If you have not fully set up the sensor, do that first and then come back.
 
-This code is the updated version of the Area_Scanner_GUI lab provided by Texas Instruments. We have modified the code in a way that sensor data (more specifically, positional data from dynamic objects) is sent to Unity.
+This code is the updated version of the Area_Scanner_GUI lab provided by Texas Instruments. We have modified the code in a way that sensor data (more specifically, positional data from dynamic objects) is sent to Unity via UDP connection.
 
 As far as we are aware, running the lab the way you see it in Texas Instruments' documentation does not use our updated code. You will need to run it manually within MATLAB.
 
