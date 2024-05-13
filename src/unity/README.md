@@ -7,6 +7,7 @@ Much of the credit to this code goes to Miles Popiela. The work we have done on 
 
 
 ### Running Unity
+Open this directory as a project in Unity.
 Make sure the box circled in red below is unchecked unless you are hooked up to the robot.
 ![image](https://github.com/8dylan7/proximitry/assets/96851333/0968eb09-c047-48cd-9b8e-9a4cdc828f33)
 
