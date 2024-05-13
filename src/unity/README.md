@@ -5,6 +5,10 @@ The organization and authors of this repository are not liable for any consequen
 
 Much of the credit to this code goes to Miles Popiela. The work we have done on this project is based on his existing code [here](https://github.com/1-61Kilometers/Magna)
 
+#### In the Scripts folder
+CollisionManager sends UDP messages to the Pico W haptic feedback system. 
+CollisionTracker controls the robot's speed
+
 
 ### Running Unity
 Open this directory as a project in Unity.
